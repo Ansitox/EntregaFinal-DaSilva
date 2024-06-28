@@ -1,0 +1,27 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1vh 2vh;
+  align-items: center;
+  min-height: 10vh;
+  background-color: #3e8a53;
+}
+
+.category-container {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  width: 50%;
+}
+
+.category-btn {
+  padding: 5px 25px;
+  font-size: 25px;
+  border-radius: 50px;
+}
+
+.category-btn:hover {
+  cursor: pointer;
+  color: #a9f291;
+  background-color: #a9f29120;
+}

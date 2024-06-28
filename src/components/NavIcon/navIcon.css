@@ -1,0 +1,19 @@
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 10vh;
+}
+
+.logo {
+  height: 7vh;
+  object-fit: cover;
+  filter: drop-shadow(1px 1px 1px black);
+}
+
+.brand-name {
+  height: 2vh;
+  object-fit: cover;
+  filter: drop-shadow(1px 1px 1px black);
+}

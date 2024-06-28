@@ -1,0 +1,17 @@
+.cart-widget-container {
+  position: static;
+}
+
+.cart-widget-counter {
+  position: absolute;
+  top: 28px;
+  right: 24px;
+  background-color: #a9f29190;
+  border-radius: 50%;
+  width: 1.2rem;
+  height: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
