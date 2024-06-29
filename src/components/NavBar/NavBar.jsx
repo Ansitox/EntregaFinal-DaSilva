@@ -8,33 +8,29 @@ export const NavBar = () => {
   return (
     <>
       <div className="navbar-container">
-        <Link to="/">
-          <NavIcon />
-        </Link>
+        <NavIcon />
 
         <ul className="category-container">
-          <Link to="/category/:category" className="category-btn">
+          <Link to="/" className="category-btn">
             Todo
           </Link>
-          <Link to="/category/:category" className="category-btn">
+          <Link to="/category/Herramientas" className="category-btn">
             Herramientas
           </Link>
-          <Link to="/category/:category" className="category-btn">
+          <Link to="/category/Interior" className="category-btn">
             Interior
           </Link>
-          <Link to="/category/:category" className="category-btn">
+          <Link to="/category/Exterior" className="category-btn">
             Exterior
           </Link>
-          <Link to="/category/:category" className="category-btn">
+          <Link to="/category/Aromática" className="category-btn">
             Aromáticas
           </Link>
-          <Link to="/category/:category" className="category-btn">
+          <Link to="/category/Frutal" className="category-btn">
             Frutales
           </Link>
         </ul>
-        <Link to="/cart">
-          <CartWidget />
-        </Link>
+        <CartWidget />
       </div>
       <Outlet />
     </>

@@ -1,4 +1,4 @@
-export const products = [
+export const myProducts = [
   {
     id: 1,
     name: "Rosa (Rosa spp.)",
