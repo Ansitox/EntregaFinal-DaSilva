@@ -20,6 +20,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 65%;
   background-color: #a9f291;
   padding: 25px;
 }
