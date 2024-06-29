@@ -8,16 +8,11 @@ import {
   Typography,
 } from "@mui/material";
 
-export const ProductCard = ({ title, description, price, id }) => {
+export const ProductCard = ({ image, title, description, price, id }) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
-          alt="green iguana"
-        />
+        <CardMedia component="img" height="140" image={image} alt={title} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {title}

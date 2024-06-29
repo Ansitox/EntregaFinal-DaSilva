@@ -7,11 +7,11 @@ export const ItemList = ({ items }) => {
         return (
           <ProductCard
             key={item.id}
+            image={item.image}
             title={item.name}
             description={item.description}
             price={item.price}
             id={item.id}
-            img={item.image}
           />
         );
       })}
