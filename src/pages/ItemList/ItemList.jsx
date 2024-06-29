@@ -2,7 +2,7 @@ import { ProductCard } from "../../components/ProductCard/ProductCard";
 
 export const ItemList = ({ items }) => {
   return (
-    <div>
+    <div className="cards-container">
       {items.map((item) => {
         return (
           <ProductCard

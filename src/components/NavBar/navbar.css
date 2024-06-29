@@ -12,16 +12,24 @@
   justify-content: space-around;
   list-style: none;
   width: 50%;
+  flex-wrap: wrap;
 }
 
 .category-btn {
-  padding: 5px 25px;
-  font-size: 25px;
+  padding: 5px 10px;
+  font-size: 20px;
   border-radius: 50px;
+  color: inherit;
+  text-decoration: none;
 }
 
 .category-btn:hover {
   cursor: pointer;
   color: #a9f291;
   background-color: #a9f29120;
+}
+
+.active-btn {
+  color: #a9f291;
+  box-shadow: inset #a9f29150 0 1px 5px;
 }

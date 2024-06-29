@@ -17,7 +17,7 @@ export const myProducts = [
       "Aroma relajante: La lavanda es conocida por su fragancia calmante y atrae a polinizadores. Prefiere pleno sol y suelos secos. Ideal para bordes de jardín y aromaterapia.",
     image:
       "https://res.cloudinary.com/djxorhctx/image/upload/v1719643168/plant-lavanda_zdbj0r.jpg",
-    category: "Aromática",
+    category: "Aromatica",
   },
   {
     id: 3,
@@ -207,7 +207,7 @@ export const myProducts = [
       "Frescura aromática: La menta es una planta aromática fácil de cultivar. Ideal para infusiones y platos culinarios. Prefiere sombra parcial.",
     image:
       "https://res.cloudinary.com/djxorhctx/image/upload/v1719644785/OIP_kw19hf.jpg",
-    category: "Aromática",
+    category: "Aromatica",
   },
   {
     id: 22,
@@ -237,7 +237,7 @@ export const myProducts = [
       "Delicia culinaria: La albahaca es una hierba aromática esencial en la cocina. Prefiere pleno sol y riego regular.",
     image:
       "https://res.cloudinary.com/djxorhctx/image/upload/v1719644923/albahaca_buppef.jpg",
-    category: "Aromática",
+    category: "Aromatica",
   },
   {
     id: 25,
@@ -277,7 +277,7 @@ export const myProducts = [
       "Calma natural: La manzanilla es una planta aromática utilizada en infusiones. Prefiere pleno sol y suelos bien drenados.",
     image:
       "https://res.cloudinary.com/djxorhctx/image/upload/v1719645104/Matricaria-chamomilla-flores_rxmrvn.jpg",
-    category: "Aromática",
+    category: "Aromatica",
   },
   {
     id: 29,
@@ -307,7 +307,7 @@ export const myProducts = [
       "Frescura versátil: La hierbabuena es una planta aromática ideal para infusiones y platos culinarios. Prefiere sombra parcial.",
     image:
       "https://res.cloudinary.com/djxorhctx/image/upload/v1719645209/IMG_8702_ktoitg.jpg",
-    category: "Aromática",
+    category: "Aromatica",
   },
   {
     id: 32,
@@ -327,7 +327,7 @@ export const myProducts = [
       "Sabor fresco: El cilantro es una hierba aromática esencial en la cocina. Prefiere pleno sol y riego moderado.",
     image:
       "https://res.cloudinary.com/djxorhctx/image/upload/v1719645275/377a9853-9c21-49c2-a78f-f0534cf5065b.8d66032bab9854811e61cba8a3657541_xvula2.jpg",
-    category: "Aromática",
+    category: "Aromatica",
   },
   {
     id: 34,
@@ -347,7 +347,7 @@ export const myProducts = [
       "Aroma y sabor: El romero es una planta aromática con múltiples usos culinarios y medicinales. Prefiere pleno sol.",
     image:
       "https://res.cloudinary.com/djxorhctx/image/upload/v1719645409/imgrc0070788143_eni1jo.jpg",
-    category: "Aromática",
+    category: "Aromatica",
   },
   {
     id: 36,
@@ -367,7 +367,7 @@ export const myProducts = [
       "Frescura culinaria: El perejil es una hierba aromática esencial en la cocina. Prefiere sombra parcial y riego regular.",
     image:
       "https://res.cloudinary.com/djxorhctx/image/upload/v1719645503/cuidados-del-perejil_tnidq1.jpg",
-    category: "Aromática",
+    category: "Aromatica",
   },
   {
     id: 38,
@@ -397,6 +397,6 @@ export const myProducts = [
       "Aroma y belleza: La lavanda francesa es una planta aromática con flores atractivas. Prefiere pleno sol y suelos secos.",
     image:
       "https://res.cloudinary.com/djxorhctx/image/upload/v1719645607/OIP_sb502o.jpg",
-    category: "Aromática",
+    category: "Aromatica",
   },
 ];

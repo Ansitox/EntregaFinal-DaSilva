@@ -1,8 +1,12 @@
-.greeting-container {
+.cards-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 90vh;
+  justify-content: space-between;
+  flex-wrap: wrap;
   background-color: #a9f291;
-  font-size: 50px;
+  padding: 20px 50px;
+  gap: 20px;
+}
+
+.prodcut-card {
+  width: 30%;
 }
