@@ -1,4 +1,3 @@
-import { ProductCard } from "../../components/ProductCard/ProductCard";
 import "./itemDetail.css";
 
 export const ItemDetail = ({ item }) => {

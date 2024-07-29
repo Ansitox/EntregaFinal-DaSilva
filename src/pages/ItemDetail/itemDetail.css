@@ -1,7 +1,16 @@
+#root {
+  background-color: #a9f291;
+  min-height: 100vh;
+}
+
 .detail-container {
   display: flex;
   flex-direction: row;
-  max-height: 88vh;
+  min-height: 83vh;
+  background-color: #a9f291;
+  margin: 20px 50px;
+  border-radius: 20px;
+  box-shadow: black 3px 3px 15px;
 }
 
 .img-container {
@@ -11,8 +20,9 @@
 }
 
 .img-container img {
-  min-height: 88vh;
   object-fit: cover;
+  overflow: hidden;
+  border-radius: 20px 0 0 20px;
 }
 
 .content-container {
@@ -21,8 +31,8 @@
   justify-content: center;
   align-items: center;
   width: 65%;
-  background-color: #a9f291;
   padding: 25px;
+  border-radius: 0 20px 20px 0;
 }
 
 .title {
