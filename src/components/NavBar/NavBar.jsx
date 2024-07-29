@@ -2,7 +2,6 @@ import { CartWidget } from "../CartWidget/CartWidget";
 import { NavIcon } from "../NavIcon/NavIcon";
 import { Link, Outlet } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-
 import "../NavBar/navbar.css";
 
 export const NavBar = () => {

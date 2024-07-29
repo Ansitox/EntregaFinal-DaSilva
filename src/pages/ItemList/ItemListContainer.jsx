@@ -3,6 +3,8 @@ import { myProducts } from "../../products";
 import { ItemList } from "./ItemList";
 import "./itemList.css";
 import { useParams } from "react-router-dom";
+import { db } from "../../firebaseConfig";
+import { collection, getDocs } from "firebase/firestore";
 
 export const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
@@ -11,19 +13,17 @@ export const ItemListContainer = () => {
   const { category } = useParams();
 
   useEffect(() => {
-    const getProducts = new Promise((resolve, reject) => {
-      let filteredProducts = myProducts.filter(
-        (product) => product.category === category
-      );
-
-      if (myProducts) {
-        resolve(category ? filteredProducts : myProducts);
-      } else {
-        reject({ message: "No se encontraron productos" });
-      }
+    const productsCollection = collection(db, "products");
+    const getProducts = getDocs(productsCollection);
+    getProducts.then((res) => {
+      let products = res.docs.map((product) => {
+        return {
+          ...product.data(),
+          id: product.id,
+        };
+      });
+      setProducts(products);
     });
-
-    getProducts.then((res) => setProducts(res)).catch((err) => setError(err));
   }, [category]);
 
   return <ItemList items={products} />;

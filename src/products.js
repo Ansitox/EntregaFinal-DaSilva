@@ -1,6 +1,5 @@
 export const myProducts = [
   {
-    id: 1,
     name: "Rosa (Rosa spp.)",
     price: 500,
     description:
@@ -10,7 +9,6 @@ export const myProducts = [
     category: "Exterior",
   },
   {
-    id: 2,
     name: "Lavanda (Lavandula spp.)",
     price: 350,
     description:
@@ -20,7 +18,6 @@ export const myProducts = [
     category: "Aromatica",
   },
   {
-    id: 3,
     name: "Tomate (Solanum lycopersicum)",
     price: 240,
     description:
@@ -30,7 +27,6 @@ export const myProducts = [
     category: "Frutal",
   },
   {
-    id: 4,
     name: "Helecho (Filicophyta spp.)",
     price: 375,
     description:
@@ -40,7 +36,6 @@ export const myProducts = [
     category: "Interior",
   },
   {
-    id: 5,
     name: "Suculenta (Suculenta spp.)",
     price: 130,
     description:
@@ -50,7 +45,6 @@ export const myProducts = [
     category: "Interior",
   },
   {
-    id: 6,
     name: "Bambú (Bambusoideae spp.)",
     price: 625,
     description:
@@ -60,7 +54,6 @@ export const myProducts = [
     category: "Exterior",
   },
   {
-    id: 7,
     name: "Tijeras de podar Fiskars",
     price: 3200,
     description:
@@ -70,7 +63,6 @@ export const myProducts = [
     category: "Herramientas",
   },
   {
-    id: 8,
     name: "Maceta auto-riego Lechuza",
     price: 4500,
     description:
@@ -80,7 +72,6 @@ export const myProducts = [
     category: "Herramientas",
   },
   {
-    id: 9,
     name: "Regadera plástica Tramontina",
     price: 530,
     description:
@@ -90,7 +81,6 @@ export const myProducts = [
     category: "Herramientas",
   },
   {
-    id: 10,
     name: "Pala de mano Stanley",
     price: 300,
     description:
@@ -100,7 +90,6 @@ export const myProducts = [
     category: "Herramientas",
   },
   {
-    id: 11,
     name: "Rastrillo pequeño Fiskars",
     price: 450,
     description:
@@ -110,7 +99,6 @@ export const myProducts = [
     category: "Herramientas",
   },
   {
-    id: 12,
     name: "Manguera de jardín Gardena",
     price: 1500,
     description:
@@ -120,7 +108,6 @@ export const myProducts = [
     category: "Herramientas",
   },
   {
-    id: 13,
     name: "Guantes de jardinería Gardena",
     price: 200,
     description:
@@ -130,7 +117,6 @@ export const myProducts = [
     category: "Herramientas",
   },
   {
-    id: 14,
     name: "Sierra de poda Black+Decker",
     price: 3500,
     description:
@@ -140,7 +126,6 @@ export const myProducts = [
     category: "Herramientas",
   },
   {
-    id: 15,
     name: "Kit de jardinería básico",
     price: 2000,
     description:
@@ -150,7 +135,6 @@ export const myProducts = [
     category: "Herramientas",
   },
   {
-    id: 16,
     name: "Aspersor de jardín Hunter",
     price: 1800,
     description:
@@ -160,7 +144,6 @@ export const myProducts = [
     category: "Herramientas",
   },
   {
-    id: 17,
     name: "Tierra para macetas Miracle-Gro",
     price: 400,
     description:
@@ -170,7 +153,6 @@ export const myProducts = [
     category: "Herramientas",
   },
   {
-    id: 18,
     name: "Sistema de riego automático RAIN",
     price: 6000,
     description:
@@ -180,7 +162,6 @@ export const myProducts = [
     category: "Herramientas",
   },
   {
-    id: 19,
     name: "Orquídea (Orchidaceae spp.)",
     price: 800,
     description:
@@ -190,7 +171,6 @@ export const myProducts = [
     category: "Interior",
   },
   {
-    id: 20,
     name: "Aloe Vera (Aloe barbadensis)",
     price: 200,
     description:
@@ -200,7 +180,6 @@ export const myProducts = [
     category: "Interior",
   },
   {
-    id: 21,
     name: "Menta (Mentha spp.)",
     price: 100,
     description:
@@ -210,7 +189,6 @@ export const myProducts = [
     category: "Aromatica",
   },
   {
-    id: 22,
     name: "Limonero (Citrus limon)",
     price: 950,
     description:
@@ -220,7 +198,6 @@ export const myProducts = [
     category: "Frutal",
   },
   {
-    id: 23,
     name: "Geranio (Pelargonium spp.)",
     price: 150,
     description:
@@ -230,7 +207,6 @@ export const myProducts = [
     category: "Exterior",
   },
   {
-    id: 24,
     name: "Albahaca (Ocimum basilicum)",
     price: 120,
     description:
@@ -240,7 +216,6 @@ export const myProducts = [
     category: "Aromatica",
   },
   {
-    id: 25,
     name: "Cactus (Cactaceae spp.)",
     price: 180,
     description:
@@ -250,7 +225,6 @@ export const myProducts = [
     category: "Interior",
   },
   {
-    id: 26,
     name: "Fresa (Fragaria × ananassa)",
     price: 220,
     description:
@@ -260,7 +234,6 @@ export const myProducts = [
     category: "Frutal",
   },
   {
-    id: 27,
     name: "Caléndula (Calendula officinalis)",
     price: 140,
     description:
@@ -270,7 +243,6 @@ export const myProducts = [
     category: "Exterior",
   },
   {
-    id: 28,
     name: "Manzanilla (Matricaria chamomilla)",
     price: 110,
     description:
@@ -280,7 +252,6 @@ export const myProducts = [
     category: "Aromatica",
   },
   {
-    id: 29,
     name: "Pepino (Cucumis sativus)",
     price: 190,
     description:
@@ -290,7 +261,6 @@ export const myProducts = [
     category: "Frutal",
   },
   {
-    id: 30,
     name: "Girasol (Helianthus annuus)",
     price: 160,
     description:
@@ -300,7 +270,6 @@ export const myProducts = [
     category: "Exterior",
   },
   {
-    id: 31,
     name: "Hierbabuena (Mentha spicata)",
     price: 100,
     description:
@@ -310,7 +279,6 @@ export const myProducts = [
     category: "Aromatica",
   },
   {
-    id: 32,
     name: "Espinaca (Spinacia oleracea)",
     price: 130,
     description:
@@ -320,7 +288,6 @@ export const myProducts = [
     category: "Frutal",
   },
   {
-    id: 33,
     name: "Cilantro (Coriandrum sativum)",
     price: 120,
     description:
@@ -330,7 +297,6 @@ export const myProducts = [
     category: "Aromatica",
   },
   {
-    id: 34,
     name: "Zanahoria (Daucus carota)",
     price: 140,
     description:
@@ -340,7 +306,6 @@ export const myProducts = [
     category: "Frutal",
   },
   {
-    id: 35,
     name: "Romero (Rosmarinus officinalis)",
     price: 150,
     description:
@@ -350,7 +315,6 @@ export const myProducts = [
     category: "Aromatica",
   },
   {
-    id: 36,
     name: "Tulipán (Tulipa spp.)",
     price: 300,
     description:
@@ -360,7 +324,6 @@ export const myProducts = [
     category: "Exterior",
   },
   {
-    id: 37,
     name: "Perejil (Petroselinum crispum)",
     price: 110,
     description:
@@ -370,7 +333,6 @@ export const myProducts = [
     category: "Aromatica",
   },
   {
-    id: 38,
     name: "Lirio (Lilium spp.)",
     price: 400,
     description:
@@ -380,7 +342,6 @@ export const myProducts = [
     category: "Exterior",
   },
   {
-    id: 39,
     name: "Hiedra (Hedera helix)",
     price: 250,
     description:
@@ -390,7 +351,6 @@ export const myProducts = [
     category: "Interior",
   },
   {
-    id: 40,
     name: "Lavanda francesa (Lavandula dentata)",
     price: 380,
     description:
