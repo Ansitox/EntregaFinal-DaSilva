@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
+
 import logo from "../../media/logo-flower.svg";
 import brandName from "../../media/logo-text.svg";
-import { Link } from "react-router-dom";
 
 import "./navIcon.css";
 

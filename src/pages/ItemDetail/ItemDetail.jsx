@@ -1,3 +1,4 @@
+import { CounterContainer } from "../../components/Caounter/CounterContainer";
 import "./itemDetail.css";
 
 export const ItemDetail = ({ item }) => {
@@ -13,6 +14,7 @@ export const ItemDetail = ({ item }) => {
           <div className="price">Precio: ${item.price}</div>
         </div>
         <div className="detail-actions">
+          <CounterContainer stock={item.stock} />
           <button className="add-to-cart" disabled>
             Agregar al carrito
           </button>
