@@ -56,9 +56,16 @@ const CartContextProvider = ({ children }) => {
       if (result.isConfirmed) {
         setCart([]);
         localStorage.removeItem("cart");
-        toast.success("Carrito vaciado con éxito.", { duration: 1500 });
+        toast.success("Carrito vaciado con éxito.", { duration: 1000 });
       }
     });
+  };
+
+  const getTotalPrice = () => {
+    let total = cart.reduce((acc, elemento) => {
+      return acc + elemento.price * elemento.quantity;
+    }, 0);
+    return total;
   };
 
   let data = {
@@ -67,6 +74,7 @@ const CartContextProvider = ({ children }) => {
     cleanCart,
     getQuantityById,
     getTotalItems,
+    getTotalPrice,
     isInCart,
   };
 

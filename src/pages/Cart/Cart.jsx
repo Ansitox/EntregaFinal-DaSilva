@@ -3,7 +3,7 @@ import { Button } from "@mui/material";
 import { LuTrash } from "react-icons/lu";
 import { Link } from "react-router-dom";
 
-export const Cart = ({ cart, totalItems, cleanCart }) => {
+export const Cart = ({ cart, cleanCart, getTotalPrice }) => {
   return (
     <div className="cart-container">
       {cart.length === 0 ? (
@@ -18,7 +18,7 @@ export const Cart = ({ cart, totalItems, cleanCart }) => {
         <>
           <div className="cart-items-container">
             <div className="cart-header">
-              <span>{totalItems}</span>
+              <span>{cart.length}</span>
               <p>Articulos en el carrito</p>
               <Button variant="contained" onClick={() => cleanCart()}>
                 <LuTrash color="#f4ee91" size="2vh" />
@@ -38,7 +38,12 @@ export const Cart = ({ cart, totalItems, cleanCart }) => {
               </div>
             ))}
           </div>
-          <div></div>
+          <div className="cart-total">
+            <p>Total: ${getTotalPrice()}</p>
+            <Link to="/checkout">
+              <Button variant="contained">Finalziar compra</Button>
+            </Link>
+          </div>
         </>
       )}
     </div>

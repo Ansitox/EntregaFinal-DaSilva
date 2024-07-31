@@ -35,7 +35,7 @@ export const ItemDetailContainer = () => {
     let finalProdcut = { ...product, quantity: quantity };
     addToCart(finalProdcut);
 
-    toast.success(toastMsg, { duration: 1500 });
+    toast.success(toastMsg, { duration: 1000 });
   };
 
   return <ItemDetail item={product} onAdd={onAdd} initial={initialQuantity} />;

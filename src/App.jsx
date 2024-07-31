@@ -12,12 +12,11 @@ function App() {
     <BrowserRouter>
       <Toaster
         richColors
-        position="bottom-right"
+        position="top-right"
         expand="false"
         toastOptions={{
           style: {
             minHeight: "3rem",
-            backgroundColor: "#f4ee9199",
             borderColor: "#a9f291",
             color: "#3e8a53",
           },
