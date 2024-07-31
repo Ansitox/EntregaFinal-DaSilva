@@ -3,5 +3,6 @@ import { CartWidget } from "./CartWidget";
 import { CartContext } from "../../context/CartContext";
 
 export const CartWidgetContainer = () => {
-  return <CartWidget />;
+  const { getTotalItems } = useContext(CartContext);
+  return <CartWidget total={getTotalItems()} />;
 };

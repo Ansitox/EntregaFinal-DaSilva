@@ -10,7 +10,20 @@ import { NavBar } from "./components/NavBar/NavBar";
 function App() {
   return (
     <BrowserRouter>
-      <Toaster richColors position="top-right" expand="false" />
+      <Toaster
+        richColors
+        position="top-left"
+        expand="false"
+        toastOptions={{
+          style: {
+            minHeight: "3rem",
+            backgroundColor: "#f4ee9199",
+            borderColor: "#a9f291",
+            color: "#3e8a53",
+          },
+        }}
+        gap="5"
+      />
       <CartContextProvider>
         <Routes>
           <Route element={<NavBar />}>

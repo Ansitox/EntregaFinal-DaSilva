@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import { collection, doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
 
-import Swal from "sweetalert2";
 import { toast } from "sonner";
 
 import { CartContext } from "../../context/CartContext";
@@ -13,7 +12,13 @@ import { ItemDetail } from "./ItemDetail";
 export const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
   const { id } = useParams();
-  const { addToCart, getQuantityById } = useContext(CartContext);
+  const { addToCart, getQuantityById, isInCart, cart } =
+    useContext(CartContext);
+
+  let toastMsg =
+    isInCart(id) && product.id === id
+      ? "Cantidad editada"
+      : "Producto agregado";
 
   let initialQuantity = getQuantityById(id);
 
@@ -29,13 +34,8 @@ export const ItemDetailContainer = () => {
   const onAdd = (quantity) => {
     let finalProdcut = { ...product, quantity: quantity };
     addToCart(finalProdcut);
-    Swal.fire({
-      position: "center",
-      icon: "success",
-      title: "Producto Agregado",
-      showConfirmButton: true,
-    });
-    toast.success("Producto Agregado");
+
+    toast.success(toastMsg, { duration: 1500 });
   };
 
   return <ItemDetail item={product} onAdd={onAdd} initial={initialQuantity} />;

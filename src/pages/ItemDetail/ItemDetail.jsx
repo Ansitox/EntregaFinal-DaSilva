@@ -1,5 +1,3 @@
-import { Button } from "@mui/material";
-
 import { CounterContainer } from "../../components/Caounter/CounterContainer";
 
 import "./itemDetail.css";
@@ -21,6 +19,7 @@ export const ItemDetail = ({ item, onAdd, initial }) => {
             stock={item.stock}
             initial={initial}
             onAdd={onAdd}
+            id={item.id}
           />
         </div>
       </div>
