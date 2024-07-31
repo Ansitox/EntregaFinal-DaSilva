@@ -1,3 +1,4 @@
+import { CartContainer } from "../pages/Cart/CartContainer";
 import { ItemDetailContainer } from "../pages/ItemDetail/ItemDetailContainer";
 import { ItemListContainer } from "../pages/ItemList/ItemListContainer";
 import { ScreenMessage } from "../pages/ScreenMessage/ScreenMessage";
@@ -21,8 +22,7 @@ export const routes = [
   {
     id: 4,
     path: "/cart",
-    Element: ScreenMessage,
-    props: { message: "No has agregado ningún producto al carrito." },
+    Element: CartContainer,
   },
   {
     id: 5,

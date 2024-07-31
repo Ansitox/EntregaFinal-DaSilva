@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <Toaster
         richColors
-        position="top-left"
+        position="bottom-right"
         expand="false"
         toastOptions={{
           style: {

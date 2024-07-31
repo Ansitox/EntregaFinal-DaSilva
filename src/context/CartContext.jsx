@@ -1,5 +1,8 @@
 import { createContext, useState } from "react";
 
+import { toast } from "sonner";
+import Swal from "sweetalert2";
+
 export const CartContext = createContext();
 
 const CartContextProvider = ({ children }) => {
@@ -41,10 +44,28 @@ const CartContextProvider = ({ children }) => {
     return cart.reduce((total, product) => total + product.quantity, 0);
   };
 
+  const cleanCart = () => {
+    Swal.fire({
+      title: "¿Deseas limpiar el carrito?",
+      icon: "warning",
+      showDenyButton: false,
+      showCancelButton: true,
+      confirmButtonText: "Save",
+      denyButtonText: `Don't save`,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setCart([]);
+        localStorage.removeItem("cart");
+        toast.success("Carrito vaciado con éxito.", { duration: 1500 });
+      }
+    });
+  };
+
   let data = {
     cart,
-    getQuantityById,
     addToCart,
+    cleanCart,
+    getQuantityById,
     getTotalItems,
     isInCart,
   };
