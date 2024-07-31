@@ -2,7 +2,7 @@ import { Button, Input } from "@mui/material";
 
 import "./counter.css";
 
-export const Counter = ({ counter, add, substract, stock }) => {
+export const Counter = ({ counter, add, substract, stock, onAdd }) => {
   return (
     <>
       <Button
@@ -21,6 +21,9 @@ export const Counter = ({ counter, add, substract, stock }) => {
         disabled={counter >= stock}
       >
         +
+      </Button>
+      <Button variant="outlined" onClick={() => onAdd(counter)}>
+        Agregar al carrito
       </Button>
     </>
   );

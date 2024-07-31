@@ -6,14 +6,41 @@ const CartContextProvider = ({ children }) => {
   const [cart, setCart] = useState(
     JSON.parse(localStorage.getItem("cart")) || []
   );
-  //   const setAndStorage = (cart) => {
-  //     setCart(cart);
-  //     localStorage.setItem("cart", JSON.stringify(cart));
-  //   };
 
-  //   const addToCart = (product) => {};
+  const setAndStorage = (cart) => {
+    setCart(cart);
+    localStorage.setItem("cart", JSON.stringify(cart));
+  };
+
+  const isInCart = (id) => {
+    return cart.some((product) => product.id === id);
+  };
+
+  const getQuantityById = (id) => {
+    return cart.find((product) => product.id === id)?.quantity;
+  };
+
+  const addToCart = (product) => {
+    const { stock, ...productWithoutStock } = product;
+
+    if (isInCart(product.id)) {
+      let newCart = cart.map((item) => {
+        if (item.id === product.id) {
+          return { ...item, quantity: product.quantity };
+        } else {
+          return item;
+        }
+      });
+      setAndStorage(newCart);
+    } else {
+      setAndStorage([...cart, productWithoutStock]);
+    }
+  };
+
   let data = {
     cart,
+    getQuantityById,
+    addToCart,
   };
 
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;

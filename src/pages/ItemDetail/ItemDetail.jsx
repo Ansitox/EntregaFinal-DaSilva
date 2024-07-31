@@ -1,7 +1,10 @@
+import { Button } from "@mui/material";
+
 import { CounterContainer } from "../../components/Caounter/CounterContainer";
+
 import "./itemDetail.css";
 
-export const ItemDetail = ({ item }) => {
+export const ItemDetail = ({ item, onAdd, initial }) => {
   return (
     <div className="detail-container">
       <div className="img-container">
@@ -14,10 +17,11 @@ export const ItemDetail = ({ item }) => {
           <div className="price">Precio: ${item.price}</div>
         </div>
         <div className="detail-actions">
-          <CounterContainer stock={item.stock} />
-          <button className="add-to-cart" disabled>
-            Agregar al carrito
-          </button>
+          <CounterContainer
+            stock={item.stock}
+            initial={initial}
+            onAdd={onAdd}
+          />
         </div>
       </div>
     </div>
