@@ -1,4 +1,4 @@
-import { CounterContainer } from "../../components/Caounter/CounterContainer";
+import { CounterContainer } from "../../components/Counter/CounterContainer";
 
 import "./itemDetail.css";
 

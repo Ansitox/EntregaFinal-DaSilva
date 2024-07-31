@@ -1,13 +1,8 @@
-#root {
-  background-color: #a9f291;
-  min-height: 100vh;
-}
-
 .detail-container {
   display: flex;
   flex-direction: row;
   min-height: 83vh;
-  background-color: #a9f291;
+  background-color: #ffffff25;
   margin: 20px 50px;
   border-radius: 20px;
   box-shadow: black 3px 3px 15px;
@@ -58,8 +53,9 @@
 .detail-actions {
   display: flex;
   justify-content: center;
-  padding-top: 20px;
+  align-items: center;
   margin-top: auto;
+  gap: 10px;
 }
 
 .detail-data {

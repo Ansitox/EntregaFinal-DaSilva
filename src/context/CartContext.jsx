@@ -50,8 +50,9 @@ const CartContextProvider = ({ children }) => {
       icon: "warning",
       showDenyButton: false,
       showCancelButton: true,
-      confirmButtonText: "Save",
-      denyButtonText: `Don't save`,
+      confirmButtonText: "Si",
+      confirmButtonColor: "#3e8a53",
+      cancelButtonText: "No",
     }).then((result) => {
       if (result.isConfirmed) {
         setCart([]);

@@ -64,17 +64,7 @@ export const ProductCard = ({ image, title, description, price, id }) => {
           $ {price}
         </Typography>
         <Link to={`/item/${id}`}>
-          <Button
-            size="small"
-            color="primary"
-            sx={{
-              backgroundColor: "#3E8A53",
-              padding: "2px 5px",
-              border: "1px solid #3E8A53",
-              borderRadius: "5px",
-              color: "white",
-            }}
-          >
+          <Button size="small" variant="contained" color="primary">
             Ver más
           </Button>
         </Link>

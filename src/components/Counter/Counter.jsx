@@ -14,28 +14,37 @@ export const Counter = ({ counter, add, substract, stock, onAdd, id }) => {
     <>
       <Button
         variant="contained"
-        color="primary"
         onClick={substract}
         disabled={counter <= 1}
+        sx={{ minWidth: "30px", maxWidth: "30px" }}
       >
         -
       </Button>
-      <h2>{counter}</h2>
+      <h2 className="counter">{counter}</h2>
       <Button
         variant="contained"
-        color="primary"
         onClick={add}
         disabled={counter >= stock}
+        sx={{ minWidth: "30px", maxWidth: "30px" }}
       >
         +
       </Button>
       <Button
-        variant="outlined"
+        variant="contained"
         onClick={() => onAdd(counter)}
         disabled={isInCart(id) && cartProduct.quantity === counter}
+        sx={{ paddingLeft: "10px" }}
       >
         {isInCart(id) ? "Editar cantidad" : "Agregar al carrito"}
       </Button>
     </>
   );
 };
+
+// sx={{
+//   backgroundColor: "#3E8A53",
+//   padding: "2px 5px",
+//   border: "1px solid #3E8A53",
+//   borderRadius: "5px",
+//   color: "white",
+// }}
