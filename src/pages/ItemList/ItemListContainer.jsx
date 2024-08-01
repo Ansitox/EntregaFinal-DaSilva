@@ -5,6 +5,7 @@ import { db } from "../../firebaseConfig";
 import { collection, getDocs, query, where } from "firebase/firestore";
 
 import { ItemList } from "./ItemList";
+import { ProductCardSkeleton } from "../../components/ProductCardSkeleton/ProductCardSkeleton";
 
 import "./itemList.css";
 
@@ -39,5 +40,13 @@ export const ItemListContainer = () => {
       .catch((error) => setError(error));
   }, [category]);
 
-  return <ItemList items={products} />;
+  const renderSkeleton = (cardNumber) => {
+    const skeletons = [];
+    for (let i = 0; i < cardNumber; i++) {
+      skeletons.push(<ProductCardSkeleton key={i} />);
+    }
+    return skeletons;
+  };
+
+  return <ItemList items={products} renderSkeleton={renderSkeleton} />;
 };

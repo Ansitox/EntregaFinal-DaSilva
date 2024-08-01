@@ -1,0 +1,12 @@
+.product-card-skeleton-container {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff50;
+  border: 1px solid #3e8a53;
+  border-radius: 10px;
+  padding-bottom: 8px;
+  gap: 8px;
+}

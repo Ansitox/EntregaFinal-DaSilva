@@ -37,12 +37,14 @@ export const ProductCard = ({ image, title, description, price, id }) => {
                 maxHeight: 100,
                 minHeight: 65,
                 textAlign: "center",
+                fontSize: "1.3rem",
               }}
               color="primary"
             >
               {title}
             </Typography>
             <Typography
+              className="card-description"
               variant="body2"
               color="text.primary"
               sx={{ textAlign: "center" }}
