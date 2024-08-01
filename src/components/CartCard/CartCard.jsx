@@ -1,9 +1,15 @@
-import { Button } from "@mui/material";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
-import "./cartCard.css";
+import { Button } from "@mui/material";
 import { LuTrash } from "react-icons/lu";
 
+import { CartQuantityHandlerContainer } from "../CartQuantityHandler/CartQuantityHandlerContainer";
+
+import "./cartCard.css";
+
 export const CartCard = ({ item }) => {
+  const { deleteItem } = useContext(CartContext);
   return (
     <div className="cart-item">
       <div className="cart-img-container">
@@ -13,11 +19,18 @@ export const CartCard = ({ item }) => {
         <p className="cart-item-name">{item.name}</p>
         <p className="cart-item-price">${item.price}</p>
       </div>
-      <div className="cart-item-quantity">
-        <p className="cart-item-quantity">Cantidad: {item.quantity}</p>
-      </div>
-      <div className="cart-item-remove">
-        <Button variant="contained" sx={{}}>
+      <div className="cart-item-actions">
+        <CartQuantityHandlerContainer
+          quantity={item.quantity}
+          id={item.id}
+          stock={item.stock}
+        />
+        <Button
+          variant="contained"
+          onClick={() => {
+            deleteItem(item.id);
+          }}
+        >
           <LuTrash color="#f4ee91" size="2vh" />
         </Button>
       </div>

@@ -1,30 +1,35 @@
 .cart-item {
-  width: 90%;
-  height: 10vh;
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 8vh;
   margin: auto;
 }
 
 .cart-img-container {
   display: flex;
   width: 10%;
+  height: 100%;
   justify-content: center;
 }
 
 .cart-img-container img {
+  width: 100%;
   object-fit: cover;
   overflow: hidden;
   border-radius: 20px 0 0 20px;
 }
 
 .cart-item-remove {
-  margin-left: auto;
+  display: flex;
+  margin-left: 2%;
 }
 
 .cart-item-info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 60%;
   margin-left: 2%;
   color: #3e8a53;
@@ -38,4 +43,14 @@
 .cart-item-price {
   font-weight: bold;
   font-size: 1.4rem;
+}
+
+.cart-item-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2%;
+}
+
+.cart-item-actions div {
+  width: 20%;
 }

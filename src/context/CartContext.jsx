@@ -24,8 +24,6 @@ const CartContextProvider = ({ children }) => {
   };
 
   const addToCart = (product) => {
-    const { stock, ...productWithoutStock } = product;
-
     if (isInCart(product.id)) {
       let newCart = cart.map((item) => {
         if (item.id === product.id) {
@@ -36,7 +34,7 @@ const CartContextProvider = ({ children }) => {
       });
       setAndStorage(newCart);
     } else {
-      setAndStorage([...cart, productWithoutStock]);
+      setAndStorage([...cart, product]);
     }
   };
 
@@ -69,10 +67,41 @@ const CartContextProvider = ({ children }) => {
     return total;
   };
 
+  const editCartItemQuantity = (id, quantity) => {
+    let newCart = cart.map((item) => {
+      if (item.id === id) {
+        return { ...item, quantity: quantity };
+      } else {
+        return item;
+      }
+    });
+    setAndStorage(newCart);
+  };
+
+  const deleteItem = (id) => {
+    Swal.fire({
+      title: "¿Deseas eliminar este producto?",
+      text: "El cambio será permanente, puede volver a agregar productos desde la tienda.",
+      showDenyButton: false,
+      showCancelButton: true,
+      confirmButtonText: "Si",
+      confirmButtonColor: "#3e8a53",
+      denyButtonText: `No`,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        let newCart = cart.filter((item) => item.id !== id);
+        setAndStorage(newCart);
+        toast.success("Producto eliminado", { duration: 1000 });
+      }
+    });
+  };
+
   let data = {
     cart,
     addToCart,
     cleanCart,
+    editCartItemQuantity,
+    deleteItem,
     getQuantityById,
     getTotalItems,
     getTotalPrice,

@@ -36,6 +36,12 @@
   border-radius: 50%;
 }
 
+.cart-items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .cart-total {
   display: flex;
   flex-direction: column;
