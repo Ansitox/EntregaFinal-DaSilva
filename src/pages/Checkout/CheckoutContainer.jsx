@@ -61,7 +61,7 @@ export const CheckoutContainer = () => {
           setOrderId(res.id);
           Swal.fire({
             title: "Compra exitosa",
-            html: `<h2>La orden de tu compra es: <strong>${res.id}</strong></h2><`,
+            html: `<h2>La orden de tu compra es: </h2><h2>${res.id}</h2>`,
             icon: "success",
             confirmButtonColor: "#3e8a53",
           });

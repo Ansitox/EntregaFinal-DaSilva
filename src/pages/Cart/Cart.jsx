@@ -41,7 +41,7 @@ export const Cart = ({ cart, cleanCart, getTotalPrice }) => {
             <h3>El total de tu compra es:</h3>
             <p>${getTotalPrice()}</p>
             <Link to="/checkout">
-              <Button variant="contained">Finalziar compra</Button>
+              <Button variant="contained">Finalizar compra</Button>
             </Link>
           </div>
         </>
