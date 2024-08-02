@@ -43,21 +43,8 @@ const CartContextProvider = ({ children }) => {
   };
 
   const cleanCart = () => {
-    Swal.fire({
-      title: "¿Deseas limpiar el carrito?",
-      icon: "warning",
-      showDenyButton: false,
-      showCancelButton: true,
-      confirmButtonText: "Si",
-      confirmButtonColor: "#3e8a53",
-      cancelButtonText: "No",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        setCart([]);
-        localStorage.removeItem("cart");
-        toast.success("Carrito vaciado con éxito.", { duration: 1000 });
-      }
-    });
+    setCart([]);
+    localStorage.removeItem("cart");
   };
 
   const getTotalPrice = () => {
