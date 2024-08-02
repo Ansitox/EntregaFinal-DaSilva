@@ -12,8 +12,7 @@ import { ItemDetail } from "./ItemDetail";
 export const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
   const { id } = useParams();
-  const { addToCart, getQuantityById, isInCart, cart } =
-    useContext(CartContext);
+  const { addToCart, getQuantityById, isInCart } = useContext(CartContext);
 
   let toastMsg =
     isInCart(id) && product.id === id

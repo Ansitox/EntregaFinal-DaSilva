@@ -5,21 +5,20 @@ import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
+import { addDoc, collection, doc, getDoc, updateDoc } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
 
 import { Checkout } from "./Checkout";
 import Swal from "sweetalert2";
 
 export const CheckoutContainer = () => {
-  const [orderId, setOrderId] = useState();
   const { getTotalPrice, cart, cleanCart } = useContext(CartContext);
   const navigate = useNavigate();
 
   let productsCollection = collection(db, "products");
   let ordersCollection = collection(db, "orders");
 
-  const { handleSubmit, handleChange, errors, values } = useFormik({
+  const { handleSubmit, handleChange, errors } = useFormik({
     initialValues: {
       firstName: "",
       lastName: "",
@@ -49,16 +48,22 @@ export const CheckoutContainer = () => {
         updateDoc(refDoc, { stock: element.stock - element.quantity });
       });
 
+      let fixedCart = cart.map((element) => {
+        let { stock, ...rest } = element;
+        return {
+          ...rest,
+        };
+      });
+
       let order = {
         buyer: userData,
-        items: cart,
+        items: fixedCart,
         total: getTotalPrice(),
         date: new Date(),
       };
 
       addDoc(ordersCollection, order)
         .then((res) => {
-          setOrderId(res.id);
           Swal.fire({
             title: "Compra exitosa",
             html: `<h2>La orden de tu compra es: </h2><h2>${res.id}</h2>`,
