@@ -5,7 +5,7 @@ import { routes } from "./routes/routes";
 
 import { Toaster } from "sonner";
 
-import { NavBar } from "./components/NavBar/NavBar";
+import { NavBarContainer } from "./components/NavBar/NavBarContainer";
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
       />
       <CartContextProvider>
         <Routes>
-          <Route element={<NavBar />}>
+          <Route element={<NavBarContainer />}>
             {routes.map(({ id, path, Element, props }) => {
               return (
                 <Route key={id} path={path} element={<Element {...props} />} />
